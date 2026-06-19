@@ -26,7 +26,7 @@ metadata:
   name: my-app-service
 spec:
   selector:
-    app: tetris
+    app: my-app
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
