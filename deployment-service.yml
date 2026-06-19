@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: yaswanthscor22/tfi-mv:appv1
+        image: nginx:latest
         ports:
         - containerPort: 3000   # Use port 3000
 
