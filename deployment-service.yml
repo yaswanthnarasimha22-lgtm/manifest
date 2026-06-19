@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: nginx:latest
+        image: yaswanthscor22/tfi-mv:appv1
         ports:
-        - containerPort: 3000   # Use port 3000
+        - containerPort: 80   # Use port 3000
 
 ---
 apiVersion: v1
@@ -30,5 +30,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80                 # Expose port 80
-    targetPort: 3000
+    targetPort: 80
   type: LoadBalancer
