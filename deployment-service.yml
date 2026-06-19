@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tetris
+  name: my-app
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: tetris
+      app: my-app
   template:
     metadata:
       labels:
-        app: tetris
+        app: my-app
     spec:
       containers:
-      - name: tetris
-        image: shaikmustafa/mytetrisgame:v2
+      - name: my-app
+        image: yaswanthscor22/tfi-mv:appv1
         ports:
         - containerPort: 3000   # Use port 3000
 
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: tetris-service
+  name: my-app-service
 spec:
   selector:
     app: tetris
